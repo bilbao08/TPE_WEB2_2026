@@ -7,4 +7,6 @@ Además, se contempla la existencia de una tabla de usuarios, pensada para la ge
 
 ## Integrantes
 Bilbao Francisco, franciscobilbao30@gmail.com
-De los santos Federico, ...
+
+De los santos Federico, fededls04@gmail.com
+
