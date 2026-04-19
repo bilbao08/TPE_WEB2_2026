@@ -1,4 +1,4 @@
-# Repositorio para Trabajo Especial de Web 2026.
+# Trabajo Especial de Web 2026.
 
 Este proyecto tiene como finalidad la creación de un sitio web orientado a brindar información sobre los partidos que se disputarán en los estadios de fútbol.
 
