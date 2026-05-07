@@ -1,0 +1,54 @@
+<?php include './templates/header.phtml'; ?>
+
+<div class="container py-5">
+
+    <h1 class="mb-4 text-center">
+        Listado de Partidos
+    </h1>
+
+    <div class="row">
+
+        <?php foreach($partidos as $partido): ?>
+
+            <div class="col-md-6 mb-4">
+
+                <div class="card shadow border-0 h-100">
+
+                    <div class="card-body">
+
+                        <h3 class="card-title">
+                            <?= $partido->equipo_local ?>
+                            vs
+                            <?= $partido->equipo_visitante ?>
+                        </h3>
+
+                        <p class="card-text">
+                            <strong>Fecha:</strong>
+                            <?= $partido->fecha ?>
+                        </p>
+
+                        <p class="card-text">
+                            <strong>Estadio:</strong>
+                            <?= $partido->estadio ?>
+                        </p>
+
+                        <a
+                            href="partidos/partido/<?= $partido->id_partido ?>"
+                            class="btn btn-primary"
+                        >
+                            Ver detalle
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        <?php endforeach ?>
+
+    </div>
+
+</div>
+
+<?php include './templates/footer.phtml'; ?>
