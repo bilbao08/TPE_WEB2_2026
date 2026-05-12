@@ -14,6 +14,17 @@ class PartidoController {
         $this->view = new PartidoView();
     }
 
+
+    
+    verificarsesion() {
+        if (!isset($_SESSION['usuario'])) {
+            header("Location: " . BASE_URL . "usuarios/login");
+            die();
+        }
+    }
+
+
+
     // mostrar todos los partidos
     public function showPartidos() {
 
@@ -23,13 +34,9 @@ class PartidoController {
         // manda datos a la view
         $this->view->showPartidos($partidos);
     }
-
-    // mostrar un partido
-    function showPartido() {
-        $partido = $this->model->getPartido();
-        $this->view->showPartido($partido);
-        }
     
+
+
     function showPartido($id) {
         $partido = $this->model->getPartido($id);
         if (!$partido) {
@@ -39,11 +46,15 @@ class PartidoController {
         $this->view->showPartido($partido);
     }
 
+
+
     function showAgregarPartido() {
         $this->verificarSesion();
-        $partidos = $this->model->getEstadios();
+        $estadios = $this->model->getEstadios();
         $this->view->showAgregarPartidos($estadios);
     }
+
+
 
     function addPartido() {
         $this->verificarSesion();
@@ -61,6 +72,7 @@ class PartidoController {
     }
 
 
+    
     function eliminarPartido($id) {
         $this->verificarSesion();
         $partido = $this->model->getPartido($id);
@@ -72,7 +84,8 @@ class PartidoController {
     }
 
 
-    function showeditarPartido($id) {
+
+    function showEditarPartido($id) {
         $this->verificarSesion();
         $partido = $this->model->getPartido($id);
         $estadios = $this->model->getEstadios();
@@ -84,6 +97,8 @@ class PartidoController {
         $this->view->showEditarPartidos($partido, $estadios);
     }
     
+
+
     function editarPartido($id) {
         $this->verificarSesion();
         $partidoactual = $this->model->getPartido($id);
