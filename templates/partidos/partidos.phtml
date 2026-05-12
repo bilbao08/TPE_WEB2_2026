@@ -1,10 +1,10 @@
 <?php include './templates/header.phtml'; ?>
 
-<div class="container py-5">
+<div class="container mt-5">
 
-    <h1 class="mb-4 text-center">
-        Listado de Partidos
-    </h1>
+    <h2 class="titulo-partidos text-center mb-4">
+        Lista de Partidos
+    </h2>
 
     <div class="row">
 
@@ -12,28 +12,28 @@
 
             <div class="col-md-6 mb-4">
 
-                <div class="card shadow border-0 h-100">
+                <div class="tarjeta-partido card">
 
                     <div class="card-body">
 
-                        <h3 class="card-title">
+                        <h3 class="titulo-equipos">
                             <?= $partido->equipo_local ?>
                             vs
                             <?= $partido->equipo_visitante ?>
                         </h3>
 
-                        <p class="card-text">
+                        <p class="info-partido">
                             <strong>Fecha:</strong>
                             <?= $partido->fecha ?>
                         </p>
 
-                        <p class="card-text">
+                        <p class="info-partido">
                             <strong>Estadio:</strong>
                             <?= $partido->estadio ?>
                         </p>
 
                         <a
-                            href="partidos/partido/<?= $partido->id_partido ?>"
+                            href="<?= BASE_URL ?>partidos/partido/<?= $partido->id_partido ?>"
                             class="btn btn-primary"
                         >
                             Ver detalle

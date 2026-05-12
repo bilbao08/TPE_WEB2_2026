@@ -1,0 +1,34 @@
+<div class="container mt-5">
+
+    <div class="card tarjeta-partido">
+
+        <div class="card-body">
+
+            <h2 class="titulo-equipos">
+                <?= $partido->equipo_local ?>
+                vs
+                <?= $partido->equipo_visitante ?>
+            </h2>
+
+            <p class="info-partido">
+                <strong>Fecha:</strong>
+                <?= $partido->fecha ?>
+            </p>
+
+            <p class="info-partido">
+                <strong>Estadio:</strong>
+                <?= $partido->estadio ?>
+            </p>
+
+            <a href="<?= BASE_URL ?>partidos"
+                class="btn btn-primary">
+                Volver
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<?php include './templates/footer.phtml'; ?>

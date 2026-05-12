@@ -94,7 +94,7 @@ class PartidoController {
             return;
         }
         
-        $this->view->showEditarPartidos($partido, $estadios);
+        $this->view->showEditarPartido($partido, $estadios);
     }
     
 

@@ -1,0 +1,12 @@
+.tarjeta-partido {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.titulo-equipos {
+    margin-bottom: 15px;
+}
+
+.info-partido {
+    font-size: 18px;
+}
