@@ -24,6 +24,16 @@
                 class="btn btn-primary">
                 Volver
             </a>
+            
+                <a href="<?= BASE_URL ?>partidos/editar/<?= $partido->id_partido ?>"
+                    class="btn btn-warning">
+                    Editar
+                </a>
+                <a href="<?= BASE_URL ?>partidos/eliminar/<?= $partido->id_partido ?>"
+                    class="btn btn-danger"
+                    onclick="return confirm('¿Estás seguro de eliminar este partido?')">
+                    Eliminar
+                </a>
 
         </div>
 
