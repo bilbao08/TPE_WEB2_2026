@@ -4,7 +4,7 @@ class PartidoModel {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=partidos_db;charset=utf8', 'root', '');}
+        $this->db = new PDO('mysql:host=localhost;dbname=estadios;charset=utf8', 'root', '');}
 
 
     function getPartidos() {//funcion para traer todos los partidos
@@ -38,7 +38,7 @@ class PartidoModel {
 
 
 
-    function addpartido($equipo_local, $equipo_visitante, $fecha, $id_estadio) {
+    function addPartido($equipo_local, $equipo_visitante, $fecha, $id_estadio) {
         $query = $this->db->prepare('INSERT INTO partidos (equipo_local, equipo_visitante, fecha, id_estadio) VALUES (?, ?, ?, ?)');
         $query->execute([$equipo_local, $equipo_visitante, $fecha, $id_estadio]);
     }
@@ -56,3 +56,4 @@ class PartidoModel {
         $query = $this->db->prepare('UPDATE partidos SET equipo_local = ?, equipo_visitante = ?, fecha = ?, id_estadio = ? WHERE id_partido = ?');
         $query->execute([$equipo_local, $equipo_visitante, $fecha, $id_estadio, $id]);
     }
+}

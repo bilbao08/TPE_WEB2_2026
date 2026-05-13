@@ -16,7 +16,7 @@ class PartidoController {
 
 
     
-    verificarsesion() {
+    function verificarsesion() {
         if (!isset($_SESSION['usuario'])) {
             header("Location: " . BASE_URL . "usuarios/login");
             die();

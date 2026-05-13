@@ -5,8 +5,8 @@ require_once './app/controllers/estadio.controller.php';
 require_once './app/controllers/user.controller.php';
 
 $partidoController = new PartidoController();
-$estadioController = new EstadioController();
-$userController = new UserController();
+//$estadioController = new EstadioController();
+//$userController = new UserController();
 
 session_start();
 
